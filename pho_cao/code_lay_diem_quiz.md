@@ -115,7 +115,7 @@ function ex_() {
             }
             item_sv.mark = Number(_text_mark[0].trim());
             let _one_q = 10 / Number(_text_mark[2].trim());
-            item_sv.mark = Math.round(_one_q * item_sv.mark);
+            item_sv.mark = Number((_one_q * item_sv.mark).toFixed(1));
             total_quest = _text_mark[2].trim();
             str_mark_sv += item_sv.msv + "\t" + item_sv.mark + "\n";
             str_all_mark_sv +=
@@ -185,6 +185,4 @@ function ex_() {
   download();
 }
 ex_();
-
-
 ```
